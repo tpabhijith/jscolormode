@@ -126,7 +126,7 @@ br.clear {
 #mobile-menu {
     position: fixed;
     /* top: 0; */
-    right: 35%;
+   left: 35%;
     top: -280px;
     /* background: #fff; */
     padding: 30px;
@@ -169,6 +169,7 @@ span.close.active {
 }
 #mobile-menu.active {
     top: 30px;
+    transition: all 0.4s ease-in;
 }
 #mobile-menu ul li {
     margin-bottom: 20px;
@@ -185,12 +186,15 @@ span.close.active {
 @media all and (max-width: 980px) {
     #menu-icon {
         display: block;
+        transition: all 0.4s ease-in;
     }
     span.close {
         display: none;
+        transition: all 0.4s ease-in;
     }
     header nav.menu {
         display: none;
+        transition: all 0.4s ease-in;
     }
 }
 header {
@@ -742,6 +746,10 @@ footer div.bottom p a:hover {
     }
 }  
 @media all and (max-width: 980px) {
+    #menu-icon {
+        margin-left: auto;
+        transition: all 0.4s ease-in;
+    }
     #contact div.right div.top form input[type="submit"] {
         padding: 16px 240px;
     }
@@ -764,6 +772,10 @@ footer div.bottom p a:hover {
     }
     header div.middle {
         display: none;
+    }
+    #mobile-menu  {
+        left: 30%;
+        transition: all 0.4s ease-in;
     }
     header div.left {
         width: 50%;
@@ -796,7 +808,11 @@ footer div.bottom p a:hover {
         font-size: 30px;
     }
 }
-@media all and (max-width: 540px) {
+@media all and (max-width: 640px) {
+    #mobile-menu {
+        left: 23%;
+        transition: all 0.4s ease-in;
+    }
     #contact div.right div.top form input[type="submit"] {
         padding: 14px 124px;
     }
@@ -868,6 +884,31 @@ footer div.bottom p a:hover {
     }
     #contact div.right div.bottom h3 {
         font-size: 24px;
+    }
+    #mobile-menu.active {
+        top: 100px;
+        left: 120px;
+        transition: 1s ease;
+    }
+    #mobile-menu {
+       left:  430px;
+        top: 100px;
+        transition: 1s ease;
+    }
+    /* #spotlight {
+        padding: 130px 0;
+        transition: 1s ease;
+    } */
+    #menu-icon {
+        width: 25px;
+    }
+    #spotlight {
+        padding: 5px 0;
+        transition: 2s ease;
+    }
+    #spotlight.act {
+        padding: 130px 0;
+        transition: .5s ease;
     }
 
 }

@@ -58,26 +58,30 @@ window.addEventListener("load", ()=>{
 
     let spanOverlay = document.querySelector('.overlay')
 let menuIcon = document.getElementById("menu-icon");
-let close = document.querySelector(".close")
+let close = document.querySelector(".close");
+let spotlight = document.querySelector("#spotlight");
 
 menuIcon.addEventListener("click",()=>{
     mobile_menu.classList.toggle("active");
     spanOverlay.classList.toggle("active");
     close.classList.toggle("active");
+    spotlight.classList.toggle("act");
 })
 spanOverlay.addEventListener("click",()=>{
     mobile_menu.classList.toggle("active");
     spanOverlay.classList.toggle("active");
     close.classList.toggle("active");
+    spotlight.classList.toggle("act");
 })
 close.addEventListener("click",()=>{
     mobile_menu.classList.toggle("active");
     spanOverlay.classList.toggle("active");
     close.classList.toggle("active");
+    spotlight.classList.toggle("act");
 })
 window.addEventListener("scroll", ()=> {
     mobile_menu.classList.remove("active",window.scrollY > 1);
     spanOverlay.classList.remove("active",window.scrollY > 1);
-    close.classList.remove("active", window.scrollY > 1);
+    close.classList.remove("act", window.scrollY > 1);
 })
 })
