@@ -1,0 +1,789 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #1C2C40;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 400;
+}
+body.active {
+    background: #000;
+    /* color: #fff; */
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+a{
+	color: #1C2C40;
+}
+a:hover,.submit:hover{
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 400;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	/* max-width:1040px; */
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+::placeholder {
+  color: #C0CCDA;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #C0CCDA;
+}
+::-ms-input-placeholder {
+  color: #C0CCDA;
+}
+:root {
+  --main-bg-color: #fff;
+  --main-font-color:#000;
+}
+header {
+    padding: 30px 0;
+    background-color: var(--main-bg-color);
+    color: --var(--main-font-color);
+}
+header.active {
+    background-color: #000;
+    color: #fff;
+}
+header section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header div.left {
+   width: 20%;
+}
+header div.left h1 i {
+    font-size: 50px;
+}
+header div.left h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+header div.left h1:hover {
+    color: #f8c146;
+    cursor: pointer;
+}
+header div.left ul li h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+header div.right {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+header div.right a i {
+    font-size: 35px;
+}
+header div.right a {
+    font-size: 18x;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+header div.right a:hover {
+    color: #f8c146;
+    cursor: pointer;
+}
+header div.middle {
+}
+header div.middle ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header div.middle ul li {
+    margin-right: 25px;
+    transition: .5s ease;
+}
+header div.middle ul li:hover {
+    transform: translateY(150%);
+    transition: .5s ease;
+}
+header div.middle ul li:hover a::before {
+    display: inline-block;
+}
+header div.middle ul li:last-child {
+    margin-right: 0;
+}
+header div.middle ul li a {
+    font-size: 20px;
+    font-weight: 600;
+}
+header div.middle ul li a.active {
+    color: #fff;
+}
+header div.middle.active {
+    color: #fff;
+}
+header div.right a.active {
+    color: #fff;
+}
+header div.middle ul li:nth-child(2) a.active {
+    color: #fff;
+}
+header div.middle ul li a {
+    position: relative;
+}
+header div.middle ul li:nth-child(1) a::before {
+    content: "About";
+    color: #f8c146;
+    position: absolute;
+    top: -35px;
+}
+header div.middle ul li:nth-child(2) a::before {
+    content: "Projects";
+    color: #f8c146;
+    position: absolute;
+    top: -35px;
+}
+header div.middle ul li:nth-child(3) a::before {
+    content: "Resume";
+    color: #f8c146;
+    position: absolute;
+    top: -35px;
+}
+header div.middle ul li:nth-child(4) a::before {
+    content: "Contacts";
+    color: #f8c146;
+    position: absolute;
+    top: -35px;
+}
+header div.active {
+    background: #000;
+    color: #fff;
+}
+#spotlight {
+    padding: 30px 0;
+}
+#spotlight.active {
+    background: #000;
+    color: #fff;
+}
+#spotlight section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#spotlight div.left {
+    width: 50%;
+}
+#spotlight div.right {
+    width: 50%;
+}
+#spotlight div.right div.image-container {
+    width: 70%;
+    margin: 0  auto;
+}
+#spotlight div.right div.image-container img {
+    display: block;
+    width: 100%;
+}
+#spotlight div.left div.top p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#spotlight div.left div.top h3 {
+  margin: 20px 0;  
+  font-size: 34px;
+  font-weight: 700;
+}
+#spotlight div.left div.top span {
+    margin-left: 20px;
+    font-weight: 600;
+}
+#spotlight div.left div.top h3 small {
+    font-size: 34px;
+    font-weight: 700;
+    color: #f8c146;
+}
+#spotlight div.left div.bottom {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#spotlight div.left div.bottom a.button1 {
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #eeeeee;
+    font-weight: 600;
+}
+#spotlight div.left div.bottom a.button2 {
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #474559;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 20px;
+}
+#spotlight div.left div.bottom a.button2:hover {
+    background: #f8c146;
+    transition: .5s ease;
+}
+#spotlight div.left div.bottom a.button1:hover {
+    color: #f8c146;
+    transition: .5s ease;
+}
+#slider {
+    padding: 100px 0;
+    text-align: center;
+}
+#slider.active {
+    color: #fff;
+    background-color: #000;
+}
+#slider section.wrapper {
+}
+#slider h3 {
+    font-size: 40px;
+    font-weight: 700;
+    width: 70%;
+    margin: 0 auto;
+}
+#slider div.image-container {
+    width: 90%;
+    margin: 0 auto;
+}
+#slider div.image-container img {
+    display: block;
+    width: 100%;
+}
+#education {
+    padding: 100px 0;
+}
+#education.active {
+    color: #fff;
+    background-color: #000;
+}
+#education section.wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+#education div.left {
+    width: 45%;
+    
+}
+#education div h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#education div.left ul {
+    position: relative;
+}
+#education div ul li {
+    display: flex;
+    margin: 30px 0;
+}
+#education div ul li span.round {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #474559;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+#education div.left ul::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #474559;
+    height: 80%;
+    top: 0;
+    left: 39px;
+    z-index: -2;
+}
+#education div ul li div.content {
+    width: 70%;
+    margin-left: 20px;
+}
+#education div ul li div.content h5 {
+    font-size: 24px;
+    font-weight: 600;
+}
+#education div ul li div.content h5 small {
+    font-size: 14px;
+    font-weight: 600;
+}
+#education div.left ul li div.content p {
+    font-size: 16px;
+}
+#education div.right {
+    width: 45%;
+}
+#education div.right h3 {
+}
+#education div.right ul {
+    position: relative;
+}
+#education div.right ul::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #474559;
+    height: 75%;
+    top: 0;
+    left: 39px;
+}
+#education div.right ul li p a {
+    color: #157af6;
+}
+#education div.right ul li p a:hover {
+    color: #f8c146;
+    cursor: pointer;
+    transition: .5s ease;
+}
+#contact {
+    padding-bottom: 100px;
+}
+#contact.active {
+    background-color: #000;
+}
+#contact section.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#contact div.left {
+    width: 45%;
+}
+#contact div.left div.top {
+    background: #474559;
+}
+#contact div.left div.top iframe {
+    width: 100%;
+}
+#contact div.left div.bottom {
+    display: flex;
+    background: #474559;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+#contact div.left div.bottom div.left {
+    width: 90%;
+    text-align: start;
+    padding: 30px;
+}
+#contact div.left div.bottom div.left h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+#contact div.left div.bottom div.left p {
+    font-weight: 700;
+}
+#contact div.left div.bottom div.left p.one {
+    margin: 10PX 0;
+}
+#contact div.left div.bottom div.left p.two:hover {
+    color: #f8c246;
+    transition: .5s ease;
+}
+#contact div.left div.bottom div.right {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: flex-start;
+}
+#contact div.left div.bottom div.right span i:hover {
+    cursor: pointer;
+    color: #f8c146;
+    transition: .5s ease;
+}
+#contact div.left div.bottom div.right span {
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+}
+#contact div.left div.bottom div.right span small {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    padding: 8px;
+    background: black;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px; 
+    display: none;
+}
+#contact div.left div.bottom div.right span small::before {
+    content: "";
+    width: 6px;
+    border-left: solid 6px black;
+    border-bottom: solid 6px transparent;
+    border-top: solid 6px transparent;
+    position: absolute;
+    right: -12px;
+    display: inline-block;
+}
+#contact div.left div.bottom div.right span i {
+    font-size: 30px;
+}
+#contact div.right {
+    width: 45%;
+}
+#contact div.right div.top {
+    width: 100%;
+}
+#contact div.right div.top form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#contact div.right div.top form input[type="text"].active {
+    border: 1px solid #fff;
+}
+#contact div.right div.top form input[type="text"]{
+    padding: 12px 24px;
+    border: 1px solid #000;
+    width: 48%;
+}
+::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+}
+#contact div.right div.top form input[type="email"]{
+    padding: 12px 24px;
+    border: 1px solid #000;
+    width: 48%;
+}
+#contact div.right div.top form input[type="email"].active {
+    border: 1px solid #fff;
+}
+#contact div.right div.top form textarea {
+    border: 1px solid #000;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px;
+    color: #6c757d;
+    font-weight: 700;
+}
+#contact div.right div.top form textarea.active {
+    border: 1px solid #fff;
+}
+#contact div.right div.top form input:focus {
+    border: 1px solid #f8c146;
+}
+#contact div.right div.top form textarea:focus {
+    border: 1px solid #f8c146;
+}  
+#contact div.right div.top form input[type="submit"]{
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #f8c246;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-top: 20px;
+}
+#contact div.right div.top form input[type="submit"]:hover {
+    background: #474559;
+    transition: .5s ease;
+}
+#contact div.right div.bottom h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#contact div.right div.bottom h3.active {
+    color: #fff;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+footer.active {
+    background-color: #000;
+}
+footer div.top {   
+}
+footer div.bottom p {
+    font-size: 14px;
+}
+footer div.top p {
+    font-size: 14px;
+}
+footer div.bottom p a {
+    font-size: 14px;
+    color: #157af6;
+}
+footer div.bottom p a:hover {
+    color: #f8c246;
+    transition: .5s ease;
+}
+@media all and (max-width:1080px) {
+    header div.right {
+        visibility: hidden;
+    }
+    header {
+        padding: 60px 0;
+    }
+    #spotlight section.wrapper {
+        flex-direction: column;
+    }
+    #spotlight div.left {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    #spotlight div.right {
+        width: 90%;
+    }
+    #education section.wrapper {
+        flex-direction: column;
+    }
+    #education div.left {
+        width: 90%;
+    }
+    #education div h3 {
+        font-size: 34px;
+    }
+    #education div ul li div.content h5 {
+        font-size: 30px;
+    }
+    #education div ul li div.content h5 small {
+        font-size: 18px;
+    }
+    #education div.right {
+        width: 90%;
+    }
+    #contact section.wrapper {
+        flex-direction: column;
+    }
+    #contact div.left {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    #contact div.right {
+        width: 90%;
+        text-align: center;
+    }
+    #contact div.right div.top form {
+        flex-direction: column;
+    }
+    #contact div.right div.top form input[type="email"] {
+        margin: 20px 0;
+        width: 100%;
+    }
+    #contact div.right div.top form textarea {
+        margin: 0;
+    }
+    #contact div.right div.top form input[type="text"] {
+        width: 100%;
+    }
+    #contact div.right div.top form input[type="submit"] {
+        padding: 16px 325px;
+        font-size: 24px;
+    }
+}  
+@media all and (max-width: 980px) {
+    #contact div.right div.top form input[type="submit"] {
+        padding: 16px 240px;
+    }
+    header section.wrapper {
+        justify-content: space-around;
+    }
+    header div.right {
+        display: none;
+    }
+}  
+@media all and (max-width: 768px) {
+    header section.wrapper {
+        justify-content: flex-start;
+    }
+    header div.middle {
+        display: none;
+    }
+    header div.left {
+        width: 50%;
+    }
+    #spotlight div.left div.bottom {
+        flex-direction: column;
+    }
+    #spotlight div.left div.bottom a.button1 {
+        padding: 14px 130px;
+    }
+    #spotlight div.left div.bottom a.button2 {
+        padding: 14px 153px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    #slider h3 {
+        font-size: 30px;
+        width: 100%;
+    }
+    #contact div.right div.top form input[type="submit"] {
+        padding: 16px 147px;
+    }
+    #education {
+        padding: 0px;
+    }
+    #contact div.left div.bottom div.right {
+        margin-left: 90px;
+    }
+    #contact div.right div.bottom h3 {
+        font-size: 30px;
+    }
+}
+@media all and (max-width: 540px) {
+    #contact div.right div.top form input[type="submit"] {
+        padding: 14px 124px;
+    }
+    header div.left h1 {
+        font-size: 26px;
+    }
+    #spotlight div.left div.bottom a.button1 {
+        padding: 8px 100px;
+    }
+    #spotlight div.left div.bottom a.button2 {
+        padding: 8px 123px;
+    }
+    #education div ul li div.content {
+        width: 75%;
+    }
+    #education div ul li div.content h5 {
+        font-size: 24px;
+    }
+    #education div ul li div.content h5 small {
+        font-size: 16px;
+    }
+    #education div.left ul li div.content p {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 480px) {
+    #contact div.right div.top form input[type="submit"] {
+        padding: 10px 83px;
+        font-size: 16px;
+    }
+    #spotlight div.left div.bottom a.button1 {
+        padding: 12px 40px;
+    }
+    #spotlight div.left div.bottom a.button2 {
+        padding: 12px 60px;
+    }
+    #spotlight {
+        text-align: center;
+    }
+    #education div ul li span.round {
+        height: 50px;
+        width: 50px;
+        font-size: 12px;
+        padding-top: 18px;
+    }
+    #education div.left ul::after {
+        left: 24px;
+    }
+    #education div.right ul::after {
+        height: 66%;
+        left: 24px;
+        z-index: -2;
+    }
+    #contact div.left div.bottom {
+        flex-direction: column;
+    }
+    #contact div.left div.bottom div.left {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    #contact div.left div.bottom div.right {
+        flex-direction: row;
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+    #contact {
+        padding-bottom: 0px;
+    }
+    #contact div.right div.bottom h3 {
+        font-size: 24px;
+    }
+
+}
