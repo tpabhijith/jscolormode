@@ -48,11 +48,36 @@ window.addEventListener("load", ()=>{
         document.querySelector("footer").classList.toggle("active");
         document.querySelector("#contact div.right div.bottom h3").classList.toggle("active");
         if (document.getElementById("spotlight").classList.contains("active")) {
-                mode.innerHTML = `<i class='bx bx-sun'></i>color mode`;
+                mode.innerHTML = `<i class='bx bx-sun'></i>Color mode`;
             }
             else {
-                mode.innerHTML = `<i class='bx bx-moon'></i> color mode`;
+                mode.innerHTML = `<i class='bx bx-moon'></i> Color mode`;
             }
     })
+    let mobile_menu = document.getElementById("mobile-menu")
 
+    let spanOverlay = document.querySelector('.overlay')
+let menuIcon = document.getElementById("menu-icon");
+let close = document.querySelector(".close")
+
+menuIcon.addEventListener("click",()=>{
+    mobile_menu.classList.toggle("active");
+    spanOverlay.classList.toggle("active");
+    close.classList.toggle("active");
+})
+spanOverlay.addEventListener("click",()=>{
+    mobile_menu.classList.toggle("active");
+    spanOverlay.classList.toggle("active");
+    close.classList.toggle("active");
+})
+close.addEventListener("click",()=>{
+    mobile_menu.classList.toggle("active");
+    spanOverlay.classList.toggle("active");
+    close.classList.toggle("active");
+})
+window.addEventListener("scroll", ()=> {
+    mobile_menu.classList.remove("active",window.scrollY > 1);
+    spanOverlay.classList.remove("active",window.scrollY > 1);
+    close.classList.remove("active", window.scrollY > 1);
+})
 })
