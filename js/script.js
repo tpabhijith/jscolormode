@@ -94,9 +94,5 @@ $(document).ready(function(){
         autoplayTimeout: 2000,
         loop: true,
         autoplayHoverPause: true,
-        // dots: true,
-        // dotsEach: true,
-        // dotsData: true,
-
     });
   });
