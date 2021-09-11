@@ -404,12 +404,25 @@ header div.active {
     margin: 0 auto;
 }
 #slider div.image-container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 #slider div.image-container img {
     display: block;
     width: 100%;
+}
+#slider div.owl-carousel.image-container.owl-loaded.owl-drag div.owl-nav {
+    font-size: 50px;
+}
+#slider div.owl-carousel.image-container.owl-loaded.owl-drag div.owl-nav button.owl-prev span {
+    position: absolute;
+    bottom: 50%;
+    left: -30px;
+}
+#slider div.owl-carousel.image-container.owl-loaded.owl-drag div.owl-nav button.owl-next span {
+    position: absolute;
+    bottom: 50%;
+    right: -30px;
 }
 #education {
     padding: 100px 0;
@@ -895,10 +908,6 @@ footer div.bottom p a:hover {
         top: 100px;
         transition: 1s ease;
     }
-    /* #spotlight {
-        padding: 130px 0;
-        transition: 1s ease;
-    } */
     #menu-icon {
         width: 25px;
     }

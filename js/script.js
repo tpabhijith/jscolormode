@@ -85,3 +85,18 @@ window.addEventListener("scroll", ()=> {
     close.classList.remove("act", window.scrollY > 1);
 })
 })
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items:1,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        loop: true,
+        autoplayHoverPause: true,
+        // dots: true,
+        // dotsEach: true,
+        // dotsData: true,
+
+    });
+  });
