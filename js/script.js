@@ -48,7 +48,7 @@ window.addEventListener("load", ()=>{
         document.querySelector("footer").classList.toggle("active");
         document.querySelector("#contact div.right div.bottom h3").classList.toggle("active");
         if (document.getElementById("spotlight").classList.contains("active")) {
-                mode.innerHTML = `<i class='bx bx-sun'></i>Color mode`;
+                mode.innerHTML = `<i class='bx bx-sun'></i>Dark mode`;
             }
             else {
                 mode.innerHTML = `<i class='bx bx-moon'></i> Color mode`;

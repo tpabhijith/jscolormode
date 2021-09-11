@@ -11,6 +11,9 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 ol, ul {
 	list-style: none;
 }
@@ -636,6 +639,14 @@ header div.active {
 #contact div.right div.top form input:focus {
     border: 1px solid #f8c146;
 }
+#contact div.right div.top form input::placeholder {
+    font-size: 18px;
+    font-weight: normal;
+}
+#contact div.right div.top form textarea::placeholder {
+    font-size: 18px;
+    font-weight: normal;
+}
 #contact div.right div.top form textarea:focus {
     border: 1px solid #f8c146;
 }  
@@ -724,9 +735,6 @@ footer div.bottom p a:hover {
     #education div.right {
         width: 90%;
     }
-    #contact section.wrapper {
-        flex-direction: column;
-    }
     #contact div.left {
         width: 90%;
         margin-bottom: 30px;
@@ -751,6 +759,9 @@ footer div.bottom p a:hover {
     #contact div.right div.top form input[type="submit"] {
         padding: 16px 325px;
         font-size: 24px;
+    }
+    #contact section.wrapper {
+        flex-direction: column;
     }
 }  
 @media all and (max-width: 980px) {
@@ -788,16 +799,15 @@ footer div.bottom p a:hover {
     header div.left {
         width: 50%;
     }
-    #spotlight div.left div.bottom {
-        flex-direction: column;
-    }
     #spotlight div.left div.bottom a.button1 {
-        padding: 14px 130px;
+        padding: 14px 40px;
+        font-size: 14px;
+        width: 50%;
     }
     #spotlight div.left div.bottom a.button2 {
-        padding: 14px 153px;
-        margin-top: 20px;
-        margin-left: 0;
+        padding: 14px 70px;
+        font-size: 14px;
+        width: 50%;
     }
     #slider h3 {
         font-size: 30px;
@@ -827,11 +837,20 @@ footer div.bottom p a:hover {
     header div.left h1 {
         font-size: 26px;
     }
+    #spotlight div.left div.bottom {
+        flex-direction: column;
+    }
     #spotlight div.left div.bottom a.button1 {
-        padding: 8px 100px;
+        padding: 18px 24px;
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 20px;
     }
     #spotlight div.left div.bottom a.button2 {
-        padding: 8px 123px;
+        padding: 18px 24px;
+        width: 100%;
+        font-size: 16px;
+        margin-left: 0;
     }
     #education div ul li div.content {
         width: 75%;
@@ -956,5 +975,28 @@ footer div.bottom p a:hover {
     footer div.top p {
         font-size: 12px;
     }
+    #contact div.left div.bottom div.right span small::before {
+        display: none;
+    }
+    #contact div.left div.bottom div.right span small {
+        top: -40px;
+        right: -15px;
+    }
+    #contact div.left div.bottom div.right span:nth-child(2) small {
+        top: -40px;
+        right: -26px;
+    }
+    #contact div.left div.bottom div.right span small::after {
+        content: "";
+        height: 6px;
+        border-top: solid 6px rgb(0,0,0);
+        border-left: solid 6px transparent;
+        border-right: solid 6px transparent;
+        position: absolute;
+        display: inline-block;
+        top: 31px;
+        left: 31px;
+    }
+    
 
 }
